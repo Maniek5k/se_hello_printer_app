@@ -17,6 +17,8 @@ def get_formatted(msg, imie, format):
         result = plain_text_lower_case(msg, imie)
     elif format == JSON:
         result = format_to_json(msg, imie)
+    elif format == XML:
+        result = format_to_xml(msg, imie)
     return result
 
 
@@ -24,6 +26,9 @@ def format_to_json(msg, imie):
     return ('{ "imie":"' + imie + '", "msg":' +
             msg + '"}')
 
+def format_to_xml(msg, imie):
+    return ('{ "imie":"' + imie + '", "msg":' +
+            msg + '"}')
 
 def plain_text(msg, imie):
     return imie + ' ' + msg

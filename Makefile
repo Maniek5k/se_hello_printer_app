@@ -33,6 +33,9 @@ docker_run_local:
 		-p 5000:5000 \
 		$(USERNAME)/$(SERVICE_NAME)
 
+docker_stop_local:
+	docker stop $(USERNAME)/$(SERVICE_NAME)
+
 docker_stop:
 	docker stop $(SERVICE_NAME)-dev
 

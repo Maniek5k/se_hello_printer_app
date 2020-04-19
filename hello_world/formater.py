@@ -29,8 +29,6 @@ def get_formatted(msg, imie, format):
 def format_to_json(msg, imie):
     json_data = {'Imie': imie, 'msg': msg}
     return (json.dumps(json_data, sort_keys=True, indent=4))
-    # return ('{ "imie":"' + imie + '", "msg":' +
-    #         msg + '"}')
 
 
 def format_to_xml(msg, imie):

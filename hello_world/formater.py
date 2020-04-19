@@ -1,10 +1,14 @@
+import json
+import xml.etree.cElementTree as e
+from hello_world import app
 
 PLAIN = "plain"
 PLAIN_UP = "plain_uppercase"
 PLAIN_LO = "plain_lowercase"
 JSON = "json"
+XML = "xml"
 
-SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON]
+SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON, XML]
 
 
 def get_formatted(msg, imie, format):
@@ -23,12 +27,16 @@ def get_formatted(msg, imie, format):
 
 
 def format_to_json(msg, imie):
-    return ('{ "imie":"' + imie + '", "msg":' +
-            msg + '"}')
+    json_data = {'Imie': imie, 'msg': msg}
+    return (json.dumps(json_data, sort_keys=True, indent=4))
+
 
 def format_to_xml(msg, imie):
-    return ('{ "imie":"' + imie + '", "msg":' +
-            msg + '"}')
+    greet = e.Element("Greetings")
+    e.SubElement(greet, "Name").text = imie
+    e.SubElement(greet, "Msg").text = msg
+    return app.response_class(e.tostring(greet), mimetype='application/xml')
+
 
 def plain_text(msg, imie):
     return imie + ' ' + msg

@@ -13,7 +13,13 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ source .venv/bin/activate
   $ pip install -r requirements.txt
   $ pip install -r test_requirements.txt
-
+  $ 
+  $ make deps -> zastępuje pip install requirements.
+  $ make run -> uruchamia aplikację
+  $ make lint -> linter flake8
+  $ make test -> testy aplikacji
+  $ make docker_build -> kontener dockera do aplikacji
+  $
   # zobacz
   $ pip list
   ```

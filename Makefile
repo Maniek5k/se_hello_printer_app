@@ -26,6 +26,9 @@ test_cov:
 test_xunit:
 	PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml
 
+test_complexity:
+	radon cc hello_world
+
 docker_build:
 	docker build -t $(MY_DOCKER_NAME) .
 

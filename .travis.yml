@@ -9,6 +9,7 @@ script:
 - make test
 - make test_cov
 - make test_xunit
+- make test_complexity
 - make docker_build
 - make docker_push
 deploy:

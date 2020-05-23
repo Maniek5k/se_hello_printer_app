@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Maniek5k/se_hello_printer_app.svg?branch=master)](https://travis-ci.org/Maniek5k/se_hello_printer_app)
-<a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=VOUi7nDHQX&Days=1000&Design=6" /></a>
+<a height=150px href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=VOUi7nDHQX&Days=1000&Design=6" /></a>
 
 # Simple Flask App
 

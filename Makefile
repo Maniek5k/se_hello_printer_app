@@ -21,10 +21,10 @@ test_smoke:
 	curl -s -o /dev/null -w "%{http_code}" --fail 127.0.0.1:5000
 
 test_cov:
-	py.test --verbose -s --cov=.
+	PYTHONPATH=. py.test --verbose -s --cov=.
 
 test_xunit:
-	py.test --verbose -s --cov=. --cov-report xml
+	PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml
 
 docker_build:
 	docker build -t $(MY_DOCKER_NAME) .

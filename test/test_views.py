@@ -23,4 +23,4 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_msg_with_name(self):
         rv = self.app.get('/?name=apolonia')
-        self.assertEqual(b'apolonia Hello World!', rv.data)
+        self.assertEqual(b'apolonia Application', rv.data)

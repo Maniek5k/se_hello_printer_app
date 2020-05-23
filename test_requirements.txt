@@ -1,5 +1,6 @@
 mock
 pytest>=4.3.1
 flake8
+black
 pytest-cov
 radon

@@ -11,6 +11,8 @@ deps:
 	pip install -r test_requirements.txt
 lint:
 	flake8 --max-line-length=120 hello_world test 
+	black hello_world
+	black test
 run:
 	python main.py
 test:

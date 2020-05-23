@@ -23,6 +23,9 @@ test_smoke:
 test_cov:
 	py.test --verbose -s --cov=.
 
+test_xunit:
+	py.test --verbose -s --cov=. --cov-report xml
+
 docker_build:
 	docker build -t $(MY_DOCKER_NAME) .
 

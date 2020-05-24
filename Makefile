@@ -7,7 +7,7 @@ MY_DOCKER_NAME=$(SERVICE_NAME)
 TAG=$(USERNAME)/$(MY_DOCKER_NAME)
 
 deps:
-	sudo apt-get install python3.6
+	apt-get install python3.6
 	pip3 install -r requirements.txt; \
 	pip3 install -r test_requirements.txt
 lint:

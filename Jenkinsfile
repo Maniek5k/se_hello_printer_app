@@ -16,5 +16,11 @@ pipeline {
                 sh 'make test'
             }
         }
+        stage('Additional') {
+            steps {
+                sh 'make test_xunit'
+                sh 'test_complexity'
+            }
+        }
     }
 }

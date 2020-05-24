@@ -7,13 +7,12 @@ MY_DOCKER_NAME=$(SERVICE_NAME)
 TAG=$(USERNAME)/$(MY_DOCKER_NAME)
 
 deps:
-	apt-get install python3.6
-	pip3 install -r requirements.txt; \
-	pip3 install -r test_requirements.txt
+	pip install -r requirements.txt; \
+	pip install -r test_requirements.txt
 lint:
 	flake8 --max-line-length=120 hello_world test 
-	black hello_world
-	black test
+	# black hello_world
+	# black test
 run:
 	python main.py
 test:
